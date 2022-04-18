@@ -16,7 +16,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        movieTable.estimatedRowHeight = 90
+        movieTable.dataSource = self
+        movieTable.delegate = self
+        favTable.estimatedRowHeight = 90
+        favTable.dataSource = self
+        favTable.delegate = self
+        registerTableViewCells()
+        viewModel.fetchInfo()
     }
 
 
@@ -53,9 +60,20 @@ extension ViewController {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let item = characterList[indexPath.row]
-        showCharacterDetail(response: item)
+        let item = viewModel.movieList[indexPath.row]
+        showMovieName(response: item)
     }
     
+}
+
+//MARK: - Configuration View
+
+extension ViewController {
+    
+    func showMovieName(response: Movies) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let detailViewController = storyboard.instantiateViewController(identifier: "ViewController") as? ViewController else { return }
+        detailViewController.viewModel.movie = response.movie1
+    }
 }
 

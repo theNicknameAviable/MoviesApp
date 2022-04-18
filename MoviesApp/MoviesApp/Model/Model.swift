@@ -8,7 +8,7 @@
 import Foundation
 
 struct Movies {
-    let name: String
+    var name: String
     let movie1 : String
     let movie2 : String
     let movie3 : String
