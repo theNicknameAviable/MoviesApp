@@ -33,7 +33,7 @@ extension ViewControllerFav {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavCell", for: indexPath) as? FavCell
-        cell?.favFilm.text = "Movie: \(viewModel.movieList[indexPath.row].name)"
+        cell?.favFilm.text = "Favorite: \(viewModel.movieList[indexPath.row].name)"
 
         if let safeCell = cell {
             return safeCell
@@ -47,7 +47,7 @@ extension ViewControllerFav {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return NSLocalizedString("Movie", comment: "")
+        return NSLocalizedString("Favorite", comment: "")
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
