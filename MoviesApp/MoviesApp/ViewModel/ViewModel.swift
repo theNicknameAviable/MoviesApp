@@ -12,7 +12,7 @@ class SceneViewModel {
     
     let movieList: [Movies] = []
     let netowrker: NetworkWorker
-    let movie: String? = ""
+    var movie: String? = ""
     
     init (networker: NetworkWorker = NetworkWorker()){
         self.netowrker = networker

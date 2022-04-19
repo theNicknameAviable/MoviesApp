@@ -73,7 +73,7 @@ extension ViewController {
     func showMovieName(response: Movies) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let detailViewController = storyboard.instantiateViewController(identifier: "ViewController") as? ViewController else { return }
-        detailViewController.viewModel.movie = response.movie1
+        detailViewController.viewModel.movie = response.name
     }
 }
 
