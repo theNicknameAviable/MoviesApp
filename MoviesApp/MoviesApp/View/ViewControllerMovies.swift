@@ -12,7 +12,7 @@ class ViewControllerMovies: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var movieTable: UITableView!
 
     
-    let viewModel = SceneViewModel()
+    let viewModel = ViewModelMovies()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class ViewControllerMovies: UIViewController, UITableViewDelegate, UITableViewDa
         movieTable.dataSource = self
         movieTable.delegate = self
         registerTableViewCells()
-        viewModel.fetchInfo()
+        viewModel.fetchMovies()()
     }
 
 
@@ -57,19 +57,7 @@ extension ViewControllerMovies {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let item = viewModel.movieList[indexPath.row]
-        showMovieName(response: item)
+        //let item = viewModel.movieList[indexPath.row]
     }
     
-}
-
-//MARK: - Configuration View
-
-extension ViewControllerFav {
-    
-    func showMovieName(response: Movies) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let detailViewController = storyboard.instantiateViewController(identifier: "ViewController") as? ViewControllerMovies else { return }
-        detailViewController.viewModel.movie = response.name
-    }
 }

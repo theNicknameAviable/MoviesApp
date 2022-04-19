@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Movies {
+struct Movies: Codable {
     var name: String
 }

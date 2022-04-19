@@ -8,7 +8,7 @@
 import Foundation
 
 
-class SceneViewModel {
+class ViewModelMovies {
     
     var movieList: [Movies] = []
     let networker: NetworkWorker
@@ -19,11 +19,6 @@ class SceneViewModel {
     }
     
     func fetchMovies() {
-        networker.requet  { movieList in
-            self.movieList = movieList
-            updateList?()
+
         }
-        
-    }
-    
 }
