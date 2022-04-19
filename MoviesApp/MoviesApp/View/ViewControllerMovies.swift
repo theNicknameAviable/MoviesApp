@@ -20,7 +20,7 @@ class ViewControllerMovies: UIViewController, UITableViewDelegate, UITableViewDa
         movieTable.dataSource = self
         movieTable.delegate = self
         registerTableViewCells()
-        viewModel.fetchMovies()()
+        viewModel.fetchMovies()
     }
 
 
