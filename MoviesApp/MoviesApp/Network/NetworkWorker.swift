@@ -11,8 +11,8 @@ import Alamofire
 
 class NetworkWorker {
     
-    func requets(url: URL, completionBlock: (Movies) -> Void) {
-        
+    func requets(completionBlock: (([Movies]) -> Void)) {
+        let movies = [Movies(name: "Batman"), Movies(name: "Superman")]
     }
     
 }

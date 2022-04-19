@@ -24,18 +24,31 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FSy-AI-3b9">
+                        <rect key="frame" x="354" y="14.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Lhz-4I-DFZ"/>
+                            <constraint firstAttribute="height" constant="40" id="cwd-Bi-asc"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="sht-GH-D9P" firstAttribute="leading" secondItem="BbC-kT-fX5" secondAttribute="leading" constant="20" id="9Jt-Zx-xPC"/>
+                    <constraint firstItem="FSy-AI-3b9" firstAttribute="top" secondItem="BbC-kT-fX5" secondAttribute="top" constant="15" id="Go1-YF-GLe"/>
                     <constraint firstAttribute="trailing" secondItem="sht-GH-D9P" secondAttribute="trailing" constant="20" id="YDl-qa-YLg"/>
                     <constraint firstItem="sht-GH-D9P" firstAttribute="centerY" secondItem="BbC-kT-fX5" secondAttribute="centerY" id="f3f-aG-dxu"/>
                     <constraint firstItem="sht-GH-D9P" firstAttribute="centerX" secondItem="BbC-kT-fX5" secondAttribute="centerX" id="hqm-gb-djd"/>
+                    <constraint firstAttribute="trailing" secondItem="FSy-AI-3b9" secondAttribute="trailing" constant="20" id="qAi-1s-WU7"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="favImage" destination="FSy-AI-3b9" id="ISb-nO-Uay"/>
                 <outlet property="film" destination="sht-GH-D9P" id="qfw-qb-4kJ"/>
             </connections>
-            <point key="canvasLocation" x="-157.97101449275362" y="137.27678571428569"/>
+            <point key="canvasLocation" x="-157.97101449275362" y="136.60714285714286"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+    </resources>
 </document>
