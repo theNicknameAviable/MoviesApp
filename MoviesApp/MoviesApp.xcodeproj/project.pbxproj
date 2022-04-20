@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F50D6FB2810848E00C019ED /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F50D6FA2810848E00C019ED /* PersistenceManager.swift */; };
 		4F628021280DDC5600A267DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F628020280DDC5600A267DA /* AppDelegate.swift */; };
 		4F628023280DDC5600A267DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F628022280DDC5600A267DA /* SceneDelegate.swift */; };
 		4F628025280DDC5600A267DA /* ViewControllerMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F628024280DDC5600A267DA /* ViewControllerMovies.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		23CDA7C251E91E48890697A1 /* Pods-MoviesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesApp.release.xcconfig"; path = "Target Support Files/Pods-MoviesApp/Pods-MoviesApp.release.xcconfig"; sourceTree = "<group>"; };
+		4F50D6FA2810848E00C019ED /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		4F62801D280DDC5600A267DA /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F628020280DDC5600A267DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F628022280DDC5600A267DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4F50D6FC2810849500C019ED /* PersistenceManager */ = {
+			isa = PBXGroup;
+			children = (
+				4F50D6FA2810848E00C019ED /* PersistenceManager.swift */,
+			);
+			path = PersistenceManager;
+			sourceTree = "<group>";
+		};
 		4F628014280DDC5600A267DA = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 			children = (
 				4F628020280DDC5600A267DA /* AppDelegate.swift */,
 				4F628022280DDC5600A267DA /* SceneDelegate.swift */,
+				4F50D6FC2810849500C019ED /* PersistenceManager */,
 				4F62803A280DDCAD00A267DA /* ViewModel */,
 				4F628037280DDC9E00A267DA /* Model */,
 				4F628034280DDC8C00A267DA /* View */,
@@ -292,6 +303,7 @@
 				4F628021280DDC5600A267DA /* AppDelegate.swift in Sources */,
 				4F628023280DDC5600A267DA /* SceneDelegate.swift in Sources */,
 				4FB1E0BE280F372300036B88 /* ViewControllerFav.swift in Sources */,
+				4F50D6FB2810848E00C019ED /* PersistenceManager.swift in Sources */,
 				4F628036280DDC9B00A267DA /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
