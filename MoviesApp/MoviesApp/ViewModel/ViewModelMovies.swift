@@ -56,12 +56,19 @@ class ViewModelMovies {
     }
     
     func saveFavMovie(_ movie: Movies){
-        
-        
+        favList.append(movie)
+        updateList?()
     }
     
     func deleteFavMovie(_ movie: Movies){
-        
+        if let index = favList.firstIndex(where: {movie.name == $0.name}){
+            favList.remove(at: index)
+        }
+        saveFavorite()
+        updateList?()
+    }
+    
+    func saveFavorite() {
         
     }
 }

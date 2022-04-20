@@ -11,7 +11,7 @@ class ViewControllerFav: UIViewController, UITableViewDelegate, UITableViewDataS
 
     @IBOutlet weak var favTable: UITableView!
     
-    let viewModel = ViewModelMovies()
+    let viewModel = ViewModelFav()
 
     override func viewDidLoad() {
         super.viewDidLoad()
