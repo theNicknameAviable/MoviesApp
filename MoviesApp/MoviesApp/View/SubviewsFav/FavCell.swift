@@ -18,7 +18,6 @@ class FavCell: UITableViewCell {
     }
     
     func configureView() {
-        //character.textColor = .darkGray
         backgroundColor = .white
     }
 }

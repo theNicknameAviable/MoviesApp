@@ -20,6 +20,10 @@ class ViewControllerMovies: UIViewController, UITableViewDelegate, UITableViewDa
         movieTable.dataSource = self
         movieTable.delegate = self
         registerTableViewCells()
+        viewModel.updateList = {
+            self.movieTable.reloadData()
+        }
+        viewModel.loadFav()
         viewModel.fetchMovies()
     }
 
@@ -35,6 +39,7 @@ extension ViewControllerMovies {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as? MovieCell
         cell?.film.text = "Movie: \(viewModel.movieList[indexPath.row].name)"
+        cell?.favImage.image = UIImage (systemName: viewModel.checkIsFAv(for: indexPath.row))
 
         if let safeCell = cell {
             return safeCell
@@ -57,7 +62,6 @@ extension ViewControllerMovies {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //let item = viewModel.movieList[indexPath.row]
     }
     
 }

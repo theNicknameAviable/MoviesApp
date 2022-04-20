@@ -21,7 +21,47 @@ class ViewModelMovies {
         self.persistenceManager = persistenceManager
     }
     
+    func initialLoad(){
+        loadFav()
+        fetchMovies()
+    }
+    
+    func loadFav(){
+        favList = []
+    }
+    
     func fetchMovies() {
-
+        networker.request { movieList in
+            self.movieList = movieList
+            self.updateList?()
         }
+    }
+    
+    func checkIsFAv(for row: Int) -> String {
+        let movieList = movieList[row]
+        if favList.contains(where: {movieList.name == $0.name}) {
+            return "star.fill"
+        } else {
+            return "star"
+        }
+    }
+    
+    func switchFavMovie(for row: Int) {
+        let movieList = movieList[row]
+        if favList.contains(where: {movieList.name == $0.name}) {
+            deleteFavMovie(movieList)
+        } else {
+            saveFavMovie(movieList)
+        }
+    }
+    
+    func saveFavMovie(_ movie: Movies){
+        
+        
+    }
+    
+    func deleteFavMovie(_ movie: Movies){
+        
+        
+    }
 }
