@@ -65,7 +65,7 @@ extension ViewControllerMovies {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        viewModel.loadFav(for: indexPath.row)
+        //viewModel.loadFav(for: indexPath.row)
     }
     
 }
