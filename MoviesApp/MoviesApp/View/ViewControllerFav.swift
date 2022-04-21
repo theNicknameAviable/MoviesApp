@@ -33,7 +33,7 @@ extension ViewControllerFav {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavCell", for: indexPath) as? FavCell
-        cell?.favFilm.text = "Favorite: \(viewModel.movieList[indexPath.row].name)"
+        cell?.favFilm.text = "Favorite: \(viewModel.movieList[indexPath.row].title)"
 
         if let safeCell = cell {
             return safeCell

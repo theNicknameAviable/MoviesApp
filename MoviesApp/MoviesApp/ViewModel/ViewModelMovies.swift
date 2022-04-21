@@ -39,7 +39,7 @@ class ViewModelMovies {
     
     func checkIsFAv(for row: Int) -> String {
         let movieList = movieList[row]
-        if favList.contains(where: {movieList.name == $0.name}) {
+        if favList.contains(where: {movieList.title == $0.title}) {
             return "star.fill"
         } else {
             return "star"
@@ -48,7 +48,7 @@ class ViewModelMovies {
     
     func switchFavMovie(for row: Int) {
         let movieList = movieList[row]
-        if favList.contains(where: {movieList.name == $0.name}) {
+        if favList.contains(where: {movieList.title == $0.title}) {
             deleteFavMovie(movieList)
         } else {
             saveFavMovie(movieList)
@@ -61,7 +61,7 @@ class ViewModelMovies {
     }
     
     func deleteFavMovie(_ movie: Movies){
-        if let index = favList.firstIndex(where: {movie.name == $0.name}){
+        if let index = favList.firstIndex(where: {movie.title == $0.title}){
             favList.remove(at: index)
         }
         saveFavorite()

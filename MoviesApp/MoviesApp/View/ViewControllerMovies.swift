@@ -27,7 +27,7 @@ class ViewControllerMovies: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.loadFav()
+        viewModel.initialLoad()
     }
 
 
@@ -41,7 +41,7 @@ extension ViewControllerMovies {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as? MovieCell
-        cell?.film.text = "Movie: \(viewModel.movieList[indexPath.row].name)"
+        cell?.film.text = "Movie: \(viewModel.movieList[indexPath.row].title)"
         cell?.favImage.image = UIImage (systemName: viewModel.checkIsFAv(for: indexPath.row))
 
         if let safeCell = cell {

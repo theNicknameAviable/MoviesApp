@@ -8,5 +8,5 @@
 import Foundation
 
 struct Movies: Codable {
-    var name: String
+    var title: String
 }
