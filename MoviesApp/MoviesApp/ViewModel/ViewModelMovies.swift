@@ -57,6 +57,7 @@ class ViewModelMovies {
     
     func saveFavMovie(_ movie: Movies){
         favList.append(movie)
+        saveFavorite()
         updateList?()
     }
     

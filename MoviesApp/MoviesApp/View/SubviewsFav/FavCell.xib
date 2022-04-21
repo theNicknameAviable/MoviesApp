@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="59" id="XHc-aa-h9z">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="59" id="XHc-aa-h9z" customClass="FavCell" customModule="MoviesApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XHc-aa-h9z" id="Dwu-5T-ava">
@@ -32,6 +32,9 @@
                     <constraint firstItem="yda-sc-UxO" firstAttribute="centerY" secondItem="Dwu-5T-ava" secondAttribute="centerY" id="zHF-95-KCv"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="favFilm" destination="yda-sc-UxO" id="uAR-YX-GQg"/>
+            </connections>
             <point key="canvasLocation" x="-510.14492753623193" y="141.62946428571428"/>
         </tableViewCell>
     </objects>

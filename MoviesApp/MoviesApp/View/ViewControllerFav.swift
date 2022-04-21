@@ -19,6 +19,13 @@ class ViewControllerFav: UIViewController, UITableViewDelegate, UITableViewDataS
         favTable.dataSource = self
         favTable.delegate = self
         registerTableViewCells()
+        viewModel.updateList = {
+            self.favTable.reloadData()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         viewModel.loadFav()
     }
 
@@ -56,7 +63,7 @@ extension ViewControllerFav {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //let item = viewModel.movieList[indexPath.row]
+        let item = viewModel.movieList[indexPath.row]
     }
     
 }
