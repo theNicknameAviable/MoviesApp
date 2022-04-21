@@ -19,7 +19,6 @@ class ViewControllerFav: UIViewController, UITableViewDelegate, UITableViewDataS
         favTable.dataSource = self
         favTable.delegate = self
         registerTableViewCells()
-        viewModel.fetchMovies()
     }
 
 

@@ -10,5 +10,12 @@ import Foundation
 
 class ViewModelFav {
     
+    var movieList: [Movies] = []
+    var updateList: (() ->Void)?
+    
+    func loadFav(){
+        movieList = []
+        updateList?()
+    }
     
 }
