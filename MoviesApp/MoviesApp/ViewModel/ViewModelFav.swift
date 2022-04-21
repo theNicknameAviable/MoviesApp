@@ -12,9 +12,15 @@ class ViewModelFav {
     
     var movieList: [Movies] = []
     var updateList: (() ->Void)?
+    let persistenceManager: PersistenceManager
+    
+    init(persistenceManager: PersistenceManager = PlistPersistenceManager()) {
+        self.persistenceManager = persistenceManager
+    }
     
     func loadFav(){
-        movieList = []
+        let moviesFromPlist: [Movies] = persistenceManager.read()
+        movieList = moviesFromPlist
         updateList?()
     }
     

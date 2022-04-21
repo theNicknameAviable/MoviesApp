@@ -23,8 +23,11 @@ class ViewControllerMovies: UIViewController, UITableViewDelegate, UITableViewDa
         viewModel.updateList = {
             self.movieTable.reloadData()
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         viewModel.loadFav()
-        viewModel.fetchMovies()
     }
 
 

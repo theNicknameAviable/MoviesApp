@@ -27,7 +27,7 @@ class ViewModelMovies {
     }
     
     func loadFav(){
-        favList = []
+        favList = persistenceManager.read()
     }
     
     func fetchMovies() {
@@ -69,6 +69,9 @@ class ViewModelMovies {
     }
     
     func saveFavorite() {
-        
+        let result = persistenceManager.save(objet: favList)
+        if !result {
+            print("error")
+        }
     }
 }

@@ -19,6 +19,7 @@ class ViewControllerFav: UIViewController, UITableViewDelegate, UITableViewDataS
         favTable.dataSource = self
         favTable.delegate = self
         registerTableViewCells()
+        viewModel.loadFav()
     }
 
 
@@ -41,8 +42,8 @@ extension ViewControllerFav {
     }
     
     func registerTableViewCells() {
-        let textFieldCell = UINib(nibName: "MovieCell", bundle: nil)
-        favTable.register(textFieldCell, forCellReuseIdentifier: "MovieCell")
+        let textFieldCell = UINib(nibName: "FavCell", bundle: nil)
+        favTable.register(textFieldCell, forCellReuseIdentifier: "FavCell")
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
